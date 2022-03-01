@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
+const PORT = 3000
 
 quotes = [
   '"PERFECT IS THE ENEMY OF GOOD." –VOLTAIRE',
@@ -21,7 +22,7 @@ quotes = [
 ]
 
 function getRandomQuote () {
-  return quotes[4]
+  return quotes[Math.floor(Math.random() * quotes.length)]
 }
 
 app.use(cors());
@@ -29,10 +30,15 @@ app.use(cors());
 app.get('/', (req, res) => res.send('Hello World!'))
 
 // To do: Create a route for retrieving all quotes
+app.get('/quotes/', (req, res) =>  res.send(quotes) )
 
 // To do: Create a route for retrieving a random quote
+app.get('/quotes/random/', (req, res) => res.send(getRandomQuote()))
 
 // To do: Refine this route and add handling for out-of-range IDs
 app.get('/quotes/:id', (req, res) => res.send(quotes[req.params.id]))
 
 // To do: Get the server running
+app.listen( PORT, () => {
+  console.log(`\nExpress departing now from port ${PORT}!\n`)
+} );

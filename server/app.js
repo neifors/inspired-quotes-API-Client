@@ -29,22 +29,19 @@ app.use(cors());
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-// To do: Create a route for retrieving all quotes
 app.get('/quotes/', (req, res) =>  res.send(quotes) )
 
-// To do: Create a route for retrieving a random quote
 app.get('/quotes/random/', (req, res) => res.send(getRandomQuote()))
 
-// To do: Refine this route and add handling for out-of-range IDs
 app.get('/quotes/:id', (req, res) => {
   if (req.params.id >= quotes.length || req.params.id < 1) {
-    res.send(`ERROR: ID out of range. Please try again with an ID between 1 and ${quotes.length}`)
+    res.send({"error":`ID out of range. Please try again with an ID between 1 and ${quotes.length}`})
   } else {
     res.send(quotes[req.params.id - 1])
   }
 })
 
-// To do: Get the server running
+
 app.listen( PORT, () => {
   console.log(`\nExpress departing now from port ${PORT}!\n`)
 } );

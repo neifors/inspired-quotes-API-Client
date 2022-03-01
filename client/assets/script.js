@@ -10,8 +10,7 @@ function getRandomQuote(e) {
     })
     .then( function(data) {
         const h1 = document.getElementById("text")
-        h1.textContent = data
-        console.log(data)
+        h1.innerHTML = data
     })
   
 }

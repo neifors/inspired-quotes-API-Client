@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 section {
@@ -38,4 +39,14 @@ input[type='submit'] {
   cursor: pointer;
   border: 0px;
   border-radius: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0vw;
+  right: 1vw;
+}
+
+p.bckgrnd-credits {
+  color: white;
 }

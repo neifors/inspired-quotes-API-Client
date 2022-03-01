@@ -9,8 +9,8 @@ function getRandomQuote(e) {
         return response.text()
     })
     .then( function(data) {
-        const h1 = document.getElementById("text")
-        h1.innerHTML = data
+        const h3 = document.getElementById("text")
+        h3.innerHTML = data
     })
   
 }

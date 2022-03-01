@@ -1,5 +1,5 @@
 body {
-  background-image: url('images/background.jpeg');
+  background-image: url("https://www.istudy.org.uk/wp-content/uploads/2020/06/838-Creative-Color.jpg");
   background-size: cover;
   background-position: center;
 
@@ -18,6 +18,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 h1 {
@@ -27,4 +28,14 @@ h1 {
 
 h3 {
   font-family: 'Dancing Script', 'cursive';
+  padding: 30px;
+}
+
+input[type='submit'] {
+  padding: 5px 15px;
+  background: #7a807c;
+  color: white;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 5px;
 }

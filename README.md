@@ -1,4 +1,4 @@
-# LAP 1 Debugging Assignment
+# API & Client to get inspired 
 
 API of inspired quotes. Client based on that API that generate random quotes to get inspired every time you submit.
 

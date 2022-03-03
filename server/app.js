@@ -24,7 +24,7 @@ quotes = [
 // add "<br>" between every quote and its author
 const newQuotes = []
 for (quote of quotes) {
-  newQuotes.push( quote.split('–')[0]+"<br> -"+quote.split('–')[1])
+  newQuotes.push( quote.split('–')[0]+"<br> - "+quote.split('–')[1] )
 }
 
 function getRandomQuote () {

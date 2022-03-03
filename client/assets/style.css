@@ -27,9 +27,15 @@ h1 {
   font-size: 40px;
 }
 
-h3#text {
+h3.text {
   font-family: 'Syne Mono', monospace;
   padding: 30px;
+  margin: 0px;
+  padding: 20px;
+}
+
+h3#quote {
+  font-size: 1.5em;
 }
 
 input[type='submit'] {
